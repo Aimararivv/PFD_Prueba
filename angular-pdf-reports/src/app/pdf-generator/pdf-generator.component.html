@@ -1,0 +1,25 @@
+<div class="container">
+  <button (click)="generatePDF()" class="generate-btn">Generar PDF</button>
+  
+  <div id="report-content" class="report">
+    <h1>Reporte de Ejemplo</h1>
+    <p>Fecha: {{ currentDate | date:'mediumDate' }}</p>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of sampleData">
+          <td>{{ item.id }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.value }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
